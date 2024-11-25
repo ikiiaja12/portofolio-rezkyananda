@@ -159,12 +159,23 @@ nav ul li a:hover::after {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Media Queries for Tablet and Mobile */
-@media (max-width: 1024px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
+/* Media query for mobile */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: row; /* Horizontal layout */
+    justify-content: center; /* Center the items */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    width: 100%; /* Full width */
   }
+
+  nav ul li {
+    margin: 0 25px; /* Increase margin to add space between items */
+  }
+
+  nav ul li a {
+    font-size: 1.1em; /* Adjust font size for mobile */
+  }
+}
 
   .hero .content, .hero .avatar {
     max-width: 100%;
