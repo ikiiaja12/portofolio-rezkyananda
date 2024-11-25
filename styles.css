@@ -178,8 +178,10 @@ nav ul li a:hover::after {
 
 @media (max-width: 768px) {
   nav ul {
-    flex-direction: column;
+    flex-direction: row; /* This ensures horizontal layout on mobile */
+    justify-content: center;
   }
+}
 
   nav ul li {
     margin: 10px 0;
