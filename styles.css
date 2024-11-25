@@ -75,20 +75,26 @@ nav ul li a:hover::after {
 
 /* Media query for mobile */
 @media (max-width: 768px) {
+  nav {
+    flex-direction: row; /* Ensure the nav remains horizontal */
+    width: 100%;  /* Take full width to prevent wrapping */
+  }
+
   nav ul {
-    display: flex; /* Ensure items are still flexbox */
-    justify-content: center; /* Center the items */
-    flex-wrap: nowrap; /* Prevent wrapping to the next line */
+    display: flex; /* Ensure items are in a horizontal row */
+    justify-content: space-between; /* Ensure space is between items */
+    width: 100%; /* Prevent the items from wrapping */
   }
 
   nav ul li {
     margin: 0 15px; /* Adjust spacing for mobile */
   }
-  
+
   nav ul li a {
     font-size: 1em; /* Adjust font size for mobile */
   }
 }
+
 
 /* Hero Section */
 .hero {
