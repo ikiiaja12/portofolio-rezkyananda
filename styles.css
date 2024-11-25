@@ -1,0 +1,448 @@
+/* Reset dan font default */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Header dan Navigasi */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 20px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+nav ul li:hover {
+  transform: translateY(-5px); /* Elevates the navigation item on hover */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.1em;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #45f7a9; /* Changes color on hover */
+  transform: scale(1.1); /* Slightly increases the size of the link */
+}
+
+nav ul li a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: #45f7a9;
+  width: 0;
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+nav ul li a:hover::after {
+  width: 100%; /* Underline effect appears on hover */
+}
+
+/* Optional: Fade-in effect for nav items */
+nav ul li {
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+nav ul li:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+nav ul li:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+nav ul li:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* Fade-in animation keyframe */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 50px;
+  background-color: #f7f9fc;
+  min-height: 100vh;
+  position: relative;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+.hero .content {
+  max-width: 50%;
+  padding-right: 50px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: #2d3a4b;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero h1 span {
+  color: #ff6a6a;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #4a4a4a;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #ff6a6a;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #e55b5b;
+  transform: scale(1.05);
+}
+
+.hero .avatar {
+  max-width: 45%;
+}
+
+.hero .avatar img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries for Tablet and Mobile */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero .content, .hero .avatar {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .hero {
+    padding: 80px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .hero-button {
+    padding: 10px 20px;
+  }
+
+  .about h2, .services h2, .contact h2 {
+    font-size: 2rem;
+  }
+
+  .about p, .services p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .services-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service {
+    margin: 10px 0;
+    max-width: 90%;
+  }
+
+  form {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .submit-button {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-button {
+    font-size: 0.9rem;
+  }
+
+  .about p,
+  .services p {
+    font-size: 0.9rem;
+  }
+
+  .contact h2 {
+    font-size: 1.8rem;
+  }
+
+  .social-media a {
+    font-size: 20px;
+  }
+}
+
+/* About Section */
+.about {
+  background: #fff;
+  padding: 80px 0;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1.2s;
+}
+
+.about h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Services Section */
+.services {
+  background-color: #f7f7f7;
+  padding: 80px 0;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1.4s;
+}
+
+.services-grid {
+  display: flex;
+  justify-content: center; 
+  gap: 20px;
+}
+
+.service {
+  background-color: #fff;
+  padding: 12px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.service:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(83, 19, 244, 0.15);
+}
+
+.service img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.service:hover img {
+  transform: scale(1.05);
+}
+
+.service h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.service p {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Portfolio Section */
+.portfolio {
+  background-color: #fff;
+  padding: 80px 0;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1.6s;
+}
+
+/* Contact Section */
+.contact {
+  background-color: #f7f7f7;
+  padding: 80px 0;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1.8s;
+  text-align: center; 
+}
+
+.contact h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #ff6a6a;
+}
+
+.submit-button {
+  background-color: #ff6a6a;
+  color: #fff;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #e55b5b;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer span {
+  color: #ff6a6a;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.social-media {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.social-media a {
+  font-size: 24px;
+  margin-right: 15px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #2d553c; /* warna WhatsApp */
+}

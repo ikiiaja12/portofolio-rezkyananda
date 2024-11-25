@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Ryan Revaldo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Tambahkan Font Awesome untuk ikon media sosial -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#about">Tentang Saya</a></li>
+        <li><a href="#services">Layanan</a></li>
+        <li><a href="#portfolio">Proyek</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="content">
+      <h1>Hello, Saya <span>Rezky ananda</span></h1>
+      <p>"Kami merancang dan mengembangkan situs web yang indah dan fungsional untuk mendukung kebutuhan industri. Dengan fokus pada estetika, efisiensi, dan kemudahan penggunaan, kami memastikan solusi digital kami dapat menarik perhatian pelanggan sekaligus meningkatkan produktivitas bisnis. Bersama-sama, kita dapat menciptakan pengalaman digital yang luar biasa dan penuh inspirasi untuk mendorong pertumbuhan industri.".</p>
+      <a href="#about" class="hero-button">Learn More</a>
+    </div>
+    <div class="avatar">
+      <img src="gambar.png" alt="Ryan Revaldo" loading="lazy">
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>Tentang Saya</h2>
+      <p>"Saya adalah seorang profesional berpengalaman dengan lebih dari satu dekade di dunia teknologi dan manufaktur. Dengan fokus pada inovasi, saya mengembangkan solusi cerdas yang dirancang untuk meningkatkan efisiensi operasional dan mendukung keberlanjutan industri. Berbekal pengetahuan mendalam dan pendekatan strategis, saya berkomitmen untuk membantu industri berkembang menuju masa depan yang lebih produktif dan ramah lingkungan."</p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2>Layanan</h2>
+      <div class="services-grid">
+        <div class="service">
+          <h3>Konsultasi Industri</h3>
+          <p>Memberikan saran strategis dan teknis untuk meningkatkan operasional industri Anda.</p>
+        </div>
+        <div class="service">
+          <h3>Manajemen Proyek</h3>
+          <p>Mengelola proyek dari awal hingga akhir untuk mencapai hasil yang optimal dalam waktu yang efisien.</p>
+        </div>
+        <div class="service">
+          <h3>Pengembangan Teknologi</h3>
+          <p>Mengembangkan solusi teknologi yang dapat meningkatkan produktivitas dan kualitas produksi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <h2>Proyek</h2>
+      <div class="services-grid">
+        <!-- Proyek 1 -->
+        <div class="service">
+          <img src="https://static.republika.co.id/uploads/images/inpicture_slide/pabrik-industri-kimia-ilustrasi-_170123071810-262.jpg" alt="Proyek 1">
+          <h3>Pengembangan Sistem Otomatisasi</h3>
+          <p>Proyek Pengembangan Sistem Otomatisasi di Manufaktur.</p>
+        </div>
+        <!-- Proyek 2 -->
+        <div class="service">
+          <img src="https://icsa.co.id/wp-content/uploads/Petrokimia-jpg.webp" alt="Proyek 2">
+          <h3>Optimasi Rantai Pasokan</h3>
+          <p>Optimasi Rantai Pasokan Menggunakan AI untuk Efisiensi.</p>
+        </div>
+        <!-- Proyek 3 -->
+        <div class="service">
+          <img src="https://www.tridiftautama.co.id/app/uploads/2024/08/artikel-51-1-1024x675.jpg" alt="Proyek 3">
+          <h3>Transformasi Digital</h3>
+          <p>Menerapkan Teknologi IoT dan Big Data untuk Optimalisasi Produksi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Kontak</h2>
+
+      <!-- Tambahkan Social Media Links di bawah judul Kontak -->
+      <div class="social-media">
+        <a href="https://wa.me/nomorwhatsappanda" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://instagram.com/usernameanda" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/ryanrevaldo" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+
+      <form>
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Nama Anda" required>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Email Anda" required>
+        </div>
+        <div class="form-group">
+          <textarea name="message" placeholder="Pesan Anda" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="submit-button">Kirim Pesan</button>
+      </form>
+      
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Ryan Revaldo. All Rights Reserved. Designed and Developed by <span>Ryan Revaldo</span></p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Form Validation and Submission
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+  
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+  
+    if (name && email && message) {
+      // Replace with EmailJS or another email sending service code
+      alert('Message sent successfully!');
+    } else {
+      alert('Please fill in all fields.');
+    }
+  });
+  
+  </script>
+  
+  <!-- Add this script tag to the <head> section of your HTML -->
+      <script async src="https://www.portofoliome.com"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+      
+        gtag('config', 'GA_TRACKING_ID');
+      </script>
+      <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    emailjs.init("BrGWtthE9vDCZg6BK"); // Pastikan userID benar
+  
+    const contactForm = document.querySelector("form");
+  
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+  
+      const formData = new FormData(contactForm);
+  
+      const emailData = {
+        name: formData.get("name"),
+        email: formData.get("email"),
+        message: formData.get("message"),
+      };
+  
+      emailjs.send("ryanlah", "ryanlah", emailData)  // Ubah "template_id" dengan ID template yang benar
+        .then(
+          function (response) {
+            Swal.fire({
+              icon: "success",
+              title: "Pesan Terkirim!",
+              text: "Terima kasih sudah menghubungi kami. Kami akan segera merespon pesan Anda.",
+              confirmButtonColor: "#333",
+              background: "#ffffff",
+              color: "#000000",
+            });
+            contactForm.reset();
+          },
+          function (error) {
+            Swal.fire({
+              icon: "error",
+              title: "Gagal Mengirim Pesan",
+              text: "Mohon coba lagi. Pastikan semua data terisi dengan benar.",
+              confirmButtonColor: "#333",
+              background: "#ffffff",
+              color: "#000000",
+            });
+            console.error("Error: ", error);
+          }
+        );
+    });
+  });
+  
+      </script>
+</body>
+</html>
