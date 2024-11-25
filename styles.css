@@ -33,19 +33,14 @@ nav {
 
 nav ul {
   list-style: none;
-  display: flex;
   margin: 0;
   padding: 0;
+  display: flex;
 }
 
 nav ul li {
   margin: 0 20px;
   position: relative;
-  transition: transform 0.3s ease;
-}
-
-nav ul li:hover {
-  transform: translateY(-5px);
 }
 
 nav ul li a {
@@ -78,22 +73,23 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
-/* Responsive for mobile */
+/* Media query for mobile */
 @media (max-width: 768px) {
   nav ul {
-    flex-direction: row; /* Ensure horizontal layout on mobile */
+    display: flex; /* Ensure items are still flexbox */
     justify-content: center; /* Center the items */
-    width: 100%; /* Make sure ul takes full width */
+    flex-wrap: nowrap; /* Prevent wrapping to the next line */
   }
 
   nav ul li {
-    margin: 0 15px; /* Adjust space between menu items */
+    margin: 0 15px; /* Adjust spacing for mobile */
   }
-
+  
   nav ul li a {
-    font-size: 1em; /* Adjust font size on smaller screens */
+    font-size: 1em; /* Adjust font size for mobile */
   }
 }
+
 
 /* Hero Section */
 .hero {
