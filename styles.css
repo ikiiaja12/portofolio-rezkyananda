@@ -243,7 +243,6 @@ nav ul li a:hover::after {
   .submit-button {
     padding: 10px 20px;
   }
-}
 
 @media (max-width: 480px) {
   .hero h1 {
