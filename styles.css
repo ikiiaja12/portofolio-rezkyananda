@@ -35,7 +35,7 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
+  display: flex; /* Make the list horizontal by default */
 }
 
 nav ul li {
@@ -76,25 +76,25 @@ nav ul li a:hover::after {
 /* Media query for mobile */
 @media (max-width: 768px) {
   nav {
-    flex-direction: row; /* Ensure the nav remains horizontal */
-    width: 100%;  /* Take full width to prevent wrapping */
+    width: 100%;  /* Ensure nav takes full width */
+    justify-content: center; /* Center the nav items */
   }
 
   nav ul {
-    display: flex; /* Ensure items are in a horizontal row */
-    justify-content: space-between; /* Ensure space is between items */
-    width: 100%; /* Prevent the items from wrapping */
+    display: flex; /* Flexbox ensures the items remain horizontal */
+    justify-content: center; /* Center the menu items */
+    flex-wrap: nowrap; /* Prevent wrapping to the next line */
+    width: 100%; /* Full width to avoid wrapping */
   }
 
   nav ul li {
-    margin: 0 15px; /* Adjust spacing for mobile */
+    margin: 0 15px; /* Adjust spacing between items */
   }
 
   nav ul li a {
     font-size: 1em; /* Adjust font size for mobile */
   }
 }
-
 
 /* Hero Section */
 .hero {
