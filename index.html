@@ -14,12 +14,16 @@
   <header>
     <nav>
       <ul>
-        <li><a href="#home">Beranda</a></li>
-        <li><a href="#about">Tentang Saya</a></li>
-        <li><a href="#services">Layanan</a></li>
-        <li><a href="#portfolio">Proyek</a></li>
-        <li><a href="#contact">Kontak</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </nav>
   </header>
 
@@ -98,9 +102,9 @@
 
       <!-- Tambahkan Social Media Links di bawah judul Kontak -->
       <div class="social-media">
-        <a href="https://wa.me/nomorwhatsappanda" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://wa.me/081378594590" target="_blank"><i class="fab fa-whatsapp"></i></a>
         <a href="https://instagram.com/usernameanda" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://github.com/ryanrevaldo" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://github.com/ikiiaja12" target="_blank"><i class="fab fa-github"></i></a>
       </div>
 
       <form>
@@ -125,6 +129,14 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    function toggleMenu() {
+      const navUl = document.querySelector('nav ul');
+      const hamburger = document.querySelector('.hamburger');
+      navUl.classList.toggle('show');
+      hamburger.classList.toggle('open');
+    }
+  </script>
   <script>
     // Form Validation and Submission
   document.getElementById('contact-form').addEventListener('submit', function(event) {
