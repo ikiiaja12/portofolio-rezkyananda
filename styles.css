@@ -96,6 +96,7 @@ nav ul li a:hover::after {
   }
 }
 
+
 /* Hero Section */
 .hero {
   display: flex;
@@ -176,7 +177,6 @@ nav ul li a:hover::after {
   }
 }
 
-/* Media query for mobile */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: row; /* Horizontal layout */
@@ -184,15 +184,9 @@ nav ul li a:hover::after {
     flex-wrap: nowrap; /* Prevent wrapping */
     width: 100%; /* Full width */
   }
-
   nav ul li {
-    margin: 0 25px; /* Increase margin to add space between items */
+    margin: 10px 0;
   }
-
-  nav ul li a {
-    font-size: 1.1em; /* Adjust font size for mobile */
-  }
-}
 
   .hero {
     padding: 80px 20px;
@@ -243,6 +237,7 @@ nav ul li a:hover::after {
   .submit-button {
     padding: 10px 20px;
   }
+}
 
 @media (max-width: 480px) {
   .hero h1 {
