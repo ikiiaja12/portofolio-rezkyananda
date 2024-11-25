@@ -185,9 +185,12 @@ nav ul li a:hover::after {
     width: 100%; /* Full width */
   }
   nav ul li {
-    margin: 10px 0;
+    margin: 0 25px; /* Increase margin to add space between items */
   }
 
+  nav ul li a {
+    font-size: 1.1em; /* Adjust font size for mobile */
+  }
   .hero {
     padding: 80px 20px;
   }
