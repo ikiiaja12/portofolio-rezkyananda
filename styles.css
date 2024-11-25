@@ -23,20 +23,29 @@ header {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
+  justify-content: space-between; /* Space between logo and navigation */
 }
 
-/* Navigation Styling */
+nav {
+  display: flex;
+  align-items: center;
+}
+
 nav ul {
   list-style: none;
   display: flex;
-  align-items: center;
   margin: 0;
   padding: 0;
 }
 
 nav ul li {
-  margin: 0 15px;
+  margin: 0 20px;
   position: relative;
+  transition: transform 0.3s ease;
+}
+
+nav ul li:hover {
+  transform: translateY(-5px);
 }
 
 nav ul li a {
@@ -44,11 +53,12 @@ nav ul li a {
   color: #fff;
   font-weight: 500;
   font-size: 1.1em;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 nav ul li a:hover {
   color: #45f7a9;
+  transform: scale(1.1);
 }
 
 nav ul li a::after {
@@ -68,28 +78,20 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
-/* Responsive Design */
+/* Responsive for mobile */
 @media (max-width: 768px) {
-  header {
-    flex-direction: row; /* Maintain row layout */
-    flex-wrap: wrap; /* Allow items to wrap if necessary */
-  }
-
-  /* Make sure navigation stays horizontal */
   nav ul {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
+    flex-direction: row; /* Ensure horizontal layout on mobile */
+    justify-content: center; /* Center the items */
+    width: 100%; /* Make sure ul takes full width */
   }
 
-  /* Reduce margin to prevent wrapping */
   nav ul li {
-    margin: 0 10px;
+    margin: 0 15px; /* Adjust space between menu items */
   }
 
-  /* Adjust font size to fit smaller screens */
   nav ul li a {
-    font-size: 1em;
+    font-size: 1em; /* Adjust font size on smaller screens */
   }
 }
 
