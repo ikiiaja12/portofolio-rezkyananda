@@ -22,6 +22,7 @@ header {
   z-index: 1000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
+
   align-items: center;
 }
 
@@ -77,67 +78,6 @@ nav ul li a::after {
 nav ul li a:hover::after {
   width: 100%;
 }
-
-/* Hamburger Menu Icon */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  margin: 4px;
-  transition: 0.3s ease;
-}
-
-/* Media Query for Responsive Header */
-@media (max-width: 768px) {
-  /* Hide the navigation links */
-  nav ul {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: #333;
-    width: 200px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  nav ul li {
-    margin: 10px 0;
-    text-align: center;
-  }
-
-  nav ul.show {
-    display: flex;
-  }
-
-  /* Show the hamburger icon */
-  .hamburger {
-    display: flex;
-  }
-
-  /* Change the appearance of the hamburger icon when the menu is open */
-  .hamburger.open span:nth-child(1) {
-    transform: rotate(45deg) translateY(8px);
-  }
-
-  .hamburger.open span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.open span:nth-child(3) {
-    transform: rotate(-45deg) translateY(-8px);
-  }
-}
-
-
-
 /* Hero Section */
 .hero {
   display: flex;
