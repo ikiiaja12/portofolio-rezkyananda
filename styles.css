@@ -69,30 +69,28 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
-/* Responsive Design */
+/* Responsive Design for Mobile */
 @media (max-width: 768px) {
   header {
-    flex-direction: row; /* Maintain row layout */
-    flex-wrap: wrap; /* Allow items to wrap if necessary */
+    flex-direction: row; /* Ensure header stays in row layout */
   }
 
-  /* Make sure navigation stays horizontal */
   nav ul {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
+    flex-direction: row; /* Ensure navigation stays in horizontal row */
+    flex-wrap: nowrap; /* Prevent items from wrapping */
+    justify-content: space-around; /* Space out items evenly */
+    width: 100%; /* Make the nav take full width */
   }
 
-  /* Reduce margin to prevent wrapping */
   nav ul li {
-    margin: 0 10px;
+    margin: 0 5px; /* Reduce margin to fit more items in smaller screen */
   }
 
-  /* Adjust font size to fit smaller screens */
   nav ul li a {
-    font-size: 1em;
+    font-size: 0.9em; /* Adjust font size for smaller screens */
   }
 }
+
 
 /* Hero Section */
 .hero {
