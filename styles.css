@@ -22,7 +22,6 @@ header {
   z-index: 1000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -69,28 +68,30 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
-/* Responsive Design for Mobile */
+/* Responsive Design */
 @media (max-width: 768px) {
   header {
-    flex-direction: row; /* Ensure header stays in row layout */
+    flex-direction: row; /* Maintain row layout */
+    flex-wrap: wrap; /* Allow items to wrap if necessary */
   }
 
+  /* Make sure navigation stays horizontal */
   nav ul {
-    flex-direction: row; /* Ensure navigation stays in horizontal row */
-    flex-wrap: nowrap; /* Prevent items from wrapping */
-    justify-content: space-around; /* Space out items evenly */
-    width: 100%; /* Make the nav take full width */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
   }
 
+  /* Reduce margin to prevent wrapping */
   nav ul li {
-    margin: 0 5px; /* Reduce margin to fit more items in smaller screen */
+    margin: 0 10px;
   }
 
+  /* Adjust font size to fit smaller screens */
   nav ul li a {
-    font-size: 0.9em; /* Adjust font size for smaller screens */
+    font-size: 1em;
   }
 }
-
 
 /* Hero Section */
 .hero {
