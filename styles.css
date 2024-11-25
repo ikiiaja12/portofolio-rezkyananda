@@ -12,18 +12,24 @@ body {
   color: #333;
 }
 
-/* Header dan Navigasi */
+/* Header and Navigation */
 header {
   background-color: #333;
   color: #fff;
-  padding: 15px 0;
+  padding: 15px 20px;
   position: sticky;
   top: 0;
   z-index: 1000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
 }
 
-/* Navigation */
+nav {
+  display: flex;
+  align-items: center;
+}
+
 nav ul {
   list-style: none;
   display: flex;
@@ -39,7 +45,7 @@ nav ul li {
 }
 
 nav ul li:hover {
-  transform: translateY(-5px); /* Elevates the navigation item on hover */
+  transform: translateY(-5px);
 }
 
 nav ul li a {
@@ -51,8 +57,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #45f7a9; /* Changes color on hover */
-  transform: scale(1.1); /* Slightly increases the size of the link */
+  color: #45f7a9;
+  transform: scale(1.1);
 }
 
 nav ul li a::after {
@@ -69,36 +75,67 @@ nav ul li a::after {
 }
 
 nav ul li a:hover::after {
-  width: 100%; /* Underline effect appears on hover */
+  width: 100%;
 }
 
-/* Optional: Fade-in effect for nav items */
-nav ul li {
-  opacity: 0;
-  animation: fadeIn 0.5s ease forwards;
+/* Hamburger Menu Icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
 }
 
-nav ul li:nth-child(1) {
-  animation-delay: 0.2s;
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px;
+  transition: 0.3s ease;
 }
 
-nav ul li:nth-child(2) {
-  animation-delay: 0.4s;
-}
+/* Media Query for Responsive Header */
+@media (max-width: 768px) {
+  /* Hide the navigation links */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #333;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
 
-nav ul li:nth-child(3) {
-  animation-delay: 0.6s;
-}
+  nav ul li {
+    margin: 10px 0;
+    text-align: center;
+  }
 
-/* Fade-in animation keyframe */
-@keyframes fadeIn {
-  0% {
+  nav ul.show {
+    display: flex;
+  }
+
+  /* Show the hamburger icon */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Change the appearance of the hamburger icon when the menu is open */
+  .hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+
+  .hamburger.open span:nth-child(2) {
     opacity: 0;
   }
-  100% {
-    opacity: 1;
+
+  .hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
   }
 }
+
 
 
 /* Hero Section */
